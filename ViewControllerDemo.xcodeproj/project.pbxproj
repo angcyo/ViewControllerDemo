@@ -13,6 +13,7 @@
 		25B3360D1D71931D00DC0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B3360C1D71931D00DC0F5F /* Assets.xcassets */; };
 		25B336181D71934D00DC0F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B336171D71934D00DC0F5F /* LaunchScreen.storyboard */; };
 		25B3361A1D71D50800DC0F5F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B336191D71D50800DC0F5F /* TestViewController.swift */; };
+		25B3361C1D72830100DC0F5F /* HideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3361B1D72830100DC0F5F /* HideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		25B336111D71931D00DC0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B336171D71934D00DC0F5F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25B336191D71D50800DC0F5F /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		25B3361B1D72830100DC0F5F /* HideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				25B336071D71931D00DC0F5F /* ViewController.swift */,
 				25B336191D71D50800DC0F5F /* TestViewController.swift */,
 				25B336091D71931D00DC0F5F /* Main.storyboard */,
+				25B3361B1D72830100DC0F5F /* HideViewController.swift */,
 				25B3360C1D71931D00DC0F5F /* Assets.xcassets */,
 				25B336111D71931D00DC0F5F /* Info.plist */,
 				25B336171D71934D00DC0F5F /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B3361C1D72830100DC0F5F /* HideViewController.swift in Sources */,
 				25B336081D71931D00DC0F5F /* ViewController.swift in Sources */,
 				25B3361A1D71D50800DC0F5F /* TestViewController.swift in Sources */,
 				25B336061D71931D00DC0F5F /* AppDelegate.swift in Sources */,
@@ -283,6 +287,7 @@
 				25B336161D71931D00DC0F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

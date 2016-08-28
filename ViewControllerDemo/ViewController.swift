@@ -147,14 +147,14 @@ class CustomPresentAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 		transitionContext.containerView()?.insertSubview(toViewController.view, belowSubview: fromViewController.view)
 
 		// 1:
-//		toViewController.view.transform = CGAffineTransformMakeTranslation(0, height)
-//		UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
-//			toViewController.view.transform = CGAffineTransformIdentity
-//			fromViewController.view.transform = CGAffineTransformMakeTranslation(0, -height)
-//		}) { (completion) in
-//			fromViewController.view.transform = CGAffineTransformIdentity
-//			transitionContext.completeTransition(completion)
-//		}
+		toViewController.view.transform = CGAffineTransformMakeTranslation(0, height)
+		UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
+			toViewController.view.transform = CGAffineTransformIdentity
+			fromViewController.view.transform = CGAffineTransformMakeTranslation(0, -height)
+		}) { (completion) in
+			fromViewController.view.transform = CGAffineTransformIdentity
+			transitionContext.completeTransition(completion)
+		}
 
 		// 2:
 //		toViewController.view.frame.offsetInPlace(dx: 0, dy: height)
@@ -167,13 +167,13 @@ class CustomPresentAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 //		}
 
 		// 3:
-		toViewController.view.center.y = 3 * height / 2
-		UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-			toViewController.view.center.y = height / 2
-			fromViewController.view.center.y = -height / 2
-		}) { completion in
-			transitionContext.completeTransition(completion)
-		}
+//		toViewController.view.center.y = 3 * height / 2
+//		UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
+//			toViewController.view.center.y = height / 2
+//			fromViewController.view.center.y = -height / 2
+//		}) { completion in
+//			transitionContext.completeTransition(completion)
+//		}
 	}
 	func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
 		return 0.3
@@ -192,14 +192,14 @@ class CustomDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 		transitionContext.containerView()?.insertSubview(toViewController.view, belowSubview: fromViewController.view)
 
 		// 1:
-//		toViewController.view.transform = CGAffineTransformMakeTranslation(0, -height)
-//		UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
-//			toViewController.view.transform = CGAffineTransformIdentity
-//			fromViewController.view.transform = CGAffineTransformMakeTranslation(0, height)
-//		}) { (completion) in
-//			fromViewController.view.transform = CGAffineTransformIdentity
-//			transitionContext.completeTransition(completion)
-//		}
+		toViewController.view.transform = CGAffineTransformMakeTranslation(0, -height)
+		UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
+			toViewController.view.transform = CGAffineTransformIdentity
+			fromViewController.view.transform = CGAffineTransformMakeTranslation(0, height)
+		}) { (completion) in
+			fromViewController.view.transform = CGAffineTransformIdentity
+			transitionContext.completeTransition(completion)
+		}
 
 		// 2:
 //		toViewController.view.frame.offsetInPlace(dx: 0, dy: -height)
@@ -212,13 +212,13 @@ class CustomDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 //		}
 
 		// 3:
-		toViewController.view.center.y = -height / 2
-		UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-			toViewController.view.center.y = height / 2
-			fromViewController.view.center.y = 3 * height / 2
-		}) { completion in
-			transitionContext.completeTransition(completion)
-		}
+//		toViewController.view.center.y = -height / 2
+//		UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
+//			toViewController.view.center.y = height / 2
+//			fromViewController.view.center.y = 3 * height / 2
+//		}) { completion in
+//			transitionContext.completeTransition(completion)
+//		}
 	}
 	func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
 		return 0.3

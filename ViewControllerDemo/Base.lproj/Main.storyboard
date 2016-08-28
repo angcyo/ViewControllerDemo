@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PJh-MT-fjY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I6H-OD-uIf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--NavigationBar-->
+        <scene sceneID="Ecj-6R-mj5">
+            <objects>
+                <viewController id="e1t-zq-TOL" customClass="HideViewController" customModule="ViewControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i1O-jL-wd3"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVq-YF-K2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E1d-yW-J25">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="qAu-Fb-njR">
+                                <rect key="frame" x="237" y="150" width="126" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf1-Fh-0Ua">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
+                                        <state key="normal" title="隐藏NavigationBar"/>
+                                        <connections>
+                                            <action selector="onHideNavitagionBar" destination="e1t-zq-TOL" eventType="touchUpInside" id="roV-0n-SSq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7l-Za-Bnt">
+                                        <rect key="frame" x="0.0" y="90" width="126" height="30"/>
+                                        <state key="normal" title="显示NavigationBar"/>
+                                        <connections>
+                                            <action selector="onShowNavigationBar:" destination="e1t-zq-TOL" eventType="touchUpInside" id="LEb-3x-ZbU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-b6-VMk">
+                                        <rect key="frame" x="23" y="180" width="79" height="30"/>
+                                        <state key="normal" title="隐藏TabBar"/>
+                                        <connections>
+                                            <action selector="onHideTabBar" destination="e1t-zq-TOL" eventType="touchUpInside" id="o5b-1j-NXN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-7T-GaX">
+                                        <rect key="frame" x="23" y="270" width="79" height="30"/>
+                                        <state key="normal" title="显示TabBar"/>
+                                        <connections>
+                                            <action selector="onShowTabBar:" destination="e1t-zq-TOL" eventType="touchUpInside" id="1Kz-E3-9ri"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qAu-Fb-njR" firstAttribute="top" secondItem="i1O-jL-wd3" secondAttribute="bottom" constant="98" id="CcL-uf-wBd"/>
+                            <constraint firstItem="qAu-Fb-njR" firstAttribute="centerX" secondItem="E1d-yW-J25" secondAttribute="centerX" id="Lrz-GT-ssG"/>
+                            <constraint firstItem="qAu-Fb-njR" firstAttribute="centerY" secondItem="E1d-yW-J25" secondAttribute="centerY" id="yNx-Hd-g1H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CcL-uf-wBd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="NavigationBar" id="r3p-8h-Jkl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5b7-Ju-rCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3003" y="-146"/>
+        </scene>
         <!--NavigationTitle-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -343,6 +407,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ou0-4I-APB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="661" y="505"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N8J-Yf-qG8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oac-AR-HaW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" badgeValue="9" systemItem="mostViewed" id="FAs-rd-mMW">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="saU-w5-9Cn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e1t-zq-TOL" kind="relationship" relationship="rootViewController" id="V7e-bX-fnx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLX-kW-UyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191" y="-146"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0SE-fv-nfD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I6H-OD-uIf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="v8Y-01-GKe">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Oac-AR-HaW" kind="relationship" relationship="viewControllers" id="jSv-IS-WKJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hea-Vv-eZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="-146"/>
         </scene>
     </scenes>
 </document>
